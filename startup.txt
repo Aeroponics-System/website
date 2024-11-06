@@ -1,0 +1,35 @@
+Structure
+	-Structure the seperate boards into individual functions
+	main board:
+		-handles all the heavy lifting
+		-generates the reports and exports them to the sd card
+		-uses an rp2040 as main controller
+		-gets data from other baords using i2c
+		- have generic screen for displaying data
+		-can have screen have dashbaord, potentially uopgrade to pi zero
+		if it gets too complex for rp2040 to handle
+
+	sub-boards:
+		-handles the sub tasks
+		-this includes temeprature capturing
+		-water dispersion
+		-ph testing
+		-temperature of water capturing
+		-heating and cooling of envirment and/or water
+		-100% use rp2040 or smaller chip if easily integrated with the boards
+
+	Webiste:
+		-use react and next to create the site
+		-somewhat interactive that introduces the process and the goals
+		-open about the process and some of the source material, some code and schematics
+
+Software
+	-git for version control
+	-vscode/sublimetext/other ide for code editing
+	-kicad for creating schematics
+	-jlcpcb for pcb manufacturing
+	-digikey/mouser or other places for pcb parts
+Parts:
+	-rp2040
+	-various resistors and capacitors
+	-voltage regulator
