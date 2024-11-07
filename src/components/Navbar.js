@@ -1,27 +1,22 @@
-import './navbar.css';
+import React from 'react';
+import { Link } from 'react-router-dom';
+import './navbar.scss';
 
 function Navbar()  {
   return(
     <nav className="navbar">
-      <div className="navbar-left">
-        <a href="/" className="logo">
-      Surplus: The Modern Agriculture Revolution
-        </a>
+      <div className="navbar__title">
+        <h1>Surplus</h1>
+        <p className="navbar__subtitle">The Modern Agriculture Revolution</p>
       </div>
-      <div className="navbar-center">
-        <ul className="nav-links">
-          <li>
-            <a href="/products">Design</a>
-          </li>
-          <li>
-            <a href="/about">About Us</a>
-          </li>
-          <li>
-            <a href="/contact">Contact</a>
-          </li>
-        </ul>
-      </div>
-    
+      <ul className="navbar__links">
+        <li>
+          <Link to="/about">About</Link>
+        </li>
+        <li>
+          <Link to="/contact">Contact</Link>
+        </li>
+      </ul>
     </nav>
   );
 }
